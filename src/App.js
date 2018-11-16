@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+//Components
 import Companies from './components/companies/Companies';
 import Positions from './components/positions/Positions';
 import Dashboard from './components/dashboard/Dashboard'
+//CSS
 import './App.css';
-
 
 class App extends Component {
   constructor(){
@@ -16,65 +17,41 @@ class App extends Component {
           ticker: 'SAN',
           id: 1,
           rate: 4,
-          variation: 0.00,        
+          variation: 0,        
         },
         {
           name: 'BBVA',
           ticker: 'BBVA',
           id: 2,
-          rate: 8,
-          variation: 0.00,
+          rate: 5,
+          variation: 0,
         },
         {
           name: 'Viscofan',
           ticker: 'VIS',
           id: 3,
-          rate: 20,
-          variation: 0.00,
+          rate: 50,
+          variation: 0,
+        },
+        {
+          name: 'Mapfre',
+          ticker: 'MAP',
+          id: 4,
+          rate: 2.50,
+          variation: 0,
         },
       ],
-      positions: [
-        // {
-        //   name: 'Santander',
-        //   ticker: 'SAN',
-        //   companyId: 1,
-        //   positionId: 1,
-        //   amount: 25,
-        //   price: 93.609,
-        //   cost: 2340.22,
-        //   value: 2651.23
-        // },
-        // {
-        //   name: 'BBVA',
-        //   ticker: 'BBVA',
-        //   companyId: 2,
-        //   positionId: 2,
-        //   amount: 40,
-        //   price: 88.72,
-        //   cost: 3548.8,
-        //   value: 2651.23
-        // },
-        // {
-        //   name: 'BBVA',
-        //   ticker: 'BBVA',
-        //   companyId: 2,
-        //   positionId: 3,
-        //   amount: 10,
-        //   price: 88.72,
-        //   cost: 2548.8,
-        //   value: 1651.23
-        // },
-      ]
-
+      positions: []
     };
     this.rateUpdate = this.rateUpdate.bind(this);
     this.positionUpdate = this.positionUpdate.bind(this);
     this.buyCompany = this.buyCompany.bind(this);
     this.sellCompany = this.sellCompany.bind(this);
+    
   }
   
   componentDidMount(){
-    this.interval = setInterval(this.rateUpdate, 1000);    
+    this.interval = setInterval(this.rateUpdate, 1000);   
     this.interval = setInterval(this.positionUpdate, 1000);    
   }
 
@@ -113,7 +90,6 @@ class App extends Component {
     const buyCost = +(targetCompany[0].rate * buyAmount).toFixed(2);
     const newCash = +(this.state.cash - buyCost).toFixed(2);
     
-
     positionsCopy.push({
       name: targetCompany[0].name,
       ticker: targetCompany[0].ticker,
@@ -140,10 +116,6 @@ class App extends Component {
     //update cash
     const newCash = this.state.cash + closedPosition[0].value
     this.setState({cash: newCash});
-  }
-
-  cashUpdate(operationAmount){
-    this.setState({cash: +(this.state.cash - operationAmount).toFixed(2)});
   }
 
   render() {
