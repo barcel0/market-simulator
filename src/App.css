@@ -1,24 +1,23 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #27282e;
 }
 
-.App-header {
-  background-color: #27282e;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2{
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
-.MainRow {
-  background: #161618;
-  width: 80%;
+.header{
+  background: black;
   height: 40px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-  font-size: calc(10px + 0.6vmin);
-  margin-bottom: 10px;
+  color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }

@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background: #27282e;
 }
 
 h2{
@@ -35,7 +34,7 @@ input{
 .panel{
     background: #2f425a;
     color: white;
-    width: 70%;
+    width: 90%;
     padding: 20px 40px;
     margin: 10px 0;
     text-align: center;
@@ -46,16 +45,18 @@ input{
 }
 .company-container{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 20px 0;
+
 }
 .company{
     background: #1a283a;
-    width: calc(100% / 4);
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    margin: 5px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
 }
 
