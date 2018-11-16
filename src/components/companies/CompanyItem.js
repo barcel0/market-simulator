@@ -11,15 +11,27 @@ class CompanyItem extends Component{
 
     render() {
         return (          
-            <div className="company-row">
-                <div className="company-data">{this.props.name}</div>
-                <div className="company-data">{this.props.ticker}</div>          
-                <div className="company-data">{this.props.rate}</div>
-                <div className="company-data">{this.props.variation}%</div>
-                <BuyCompany 
-                    id = {this.props.id}
-                    buyCompany = {this.props.buyCompany}
-                />
+            <div className="company">
+                <img src={require('./chart1.png')} alt="temp"/>
+                <div className="company-data-container">
+                        <div className="company-data-row">
+                            <span className="data">Name</span><span className="company-name">{this.props.name}</span>
+                        </div>
+                        <div className="company-data-row">
+                            <span className="data">Ticker</span><span className="company-name">{this.props.ticker}</span>
+                        </div>
+                        <div className="company-data-row">
+                            <span className="data">Rate</span>
+                            <span className="company-rate">
+                                {this.props.rate} (<span className="green">{this.props.variation}%</span>)
+                            </span>
+                        </div>
+                        <BuyCompany 
+                            id = {this.props.id}
+                            rate = {this.props.rate}
+                            buyCompany = {this.props.buyCompany}
+                        />
+                </div>
             </div>
         );
     }

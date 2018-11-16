@@ -1,14 +1,14 @@
-.PositionRow {
-    width: calc(100% / 1.2);
-    font-size: calc(10px + 0.6vmin);
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-evenly;
+.table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;         
+    width: calc(100% / 7);    
+    line-height: 40px;     
+    vertical-align: center;
+    margin: 2px 0;
+
   }
-  
-.PositionData{
-    vertical-align: top;
-    padding-top: 8px;
-    width: calc(100% / 7);
-    text-align: center;
-}
+
+  .company-data{
+    background-color: #1a283a; 
+  }
+

@@ -5,20 +5,20 @@ import './Positions.css';
 class Positions extends Component{
   render(){
     return(
-      <div className="positions-container">
+      <div className="panel">
         <h2>Positions</h2>
-        <div className="position-container">
-          <div className="PositionData">Name</div>
-          <div className="PositionData">Ticker</div>
-          <div className="PositionData">Amount</div>
-          <div className="PositionData">Price</div>
-          <div className="PositionData">Cost</div>
-          <div className="PositionData">Value</div>
-          <div className="PositionData">Profit</div>
-          <div className="PositionData">Action</div>
-        </div>
-        {this.props.positions.map((position, i)=>
-          <div className="position-container">
+        <div className="table">
+          <div className="table-row">
+              <div className="table-col table-head">Name</div>
+              <div className="table-col table-head">Amount</div>
+              <div className="table-col table-head">Price</div>
+              <div className="table-col table-head">Cost</div>
+              <div className="table-col table-head">Value</div>
+              <div className="table-col table-head">Profit</div>
+              <div className="table-col table-head">Action</div>
+          </div>
+
+          {this.props.positions.map((position, i)=>
             <PositionItem 
               key={i}
               sellCompany={this.props.sellCompany}
@@ -32,8 +32,8 @@ class Positions extends Component{
               // profit={position.profit}
               // positionId={position.positionId}
             />
-          </div>
-          )}
+          )}          
+        </div>
       </div>
     );
   }

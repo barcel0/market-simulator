@@ -4,11 +4,9 @@ import './Dashboard.css'
 class Dashboard extends Component{
     render(){
         return(
-            <div class="dashboard-container">
+            <div className="panel">
                 <h2>Dashboard</h2>
-                <div className="dashboard-row">
-                    Cash: ${this.props.cash}
-                </div>
+                CASH: <span className="green">${this.props.cash}</span>
             </div>
         )
     }

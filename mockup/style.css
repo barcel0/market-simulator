@@ -133,3 +133,40 @@ input{
     justify-content: space-between;
     border-bottom: 1px solid #0e1621;
 }
+
+/* DIV TABLE */
+.table{
+    display: table;         
+    width: 100%;         
+    background-color: none;         
+    border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+
+.table-head{
+    font-weight: bold;
+}
+
+.table-row {
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+
+.table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;         
+    width: calc(100% / 7);    
+    line-height: 40px;     
+    vertical-align: center;
+    background-color: #1a283a; 
+  }
+
+.sell-company {
+    background: #a02323;
+    cursor: pointer;
+}
+
+.sell-company:hover {
+    background: red;
+    font-weight: bold;
+}

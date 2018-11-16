@@ -1,13 +1,17 @@
-.positions-container{
-  width: 100%;
+.table{
+  display: table;         
+  width: 100%;         
+  background-color: none;         
+  border-spacing: 5px; /* cellspacing:poor IE support for  this */
 }
 
-.position-container {
-  background: #161618;
-  width: 80%;
-  height: 40px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-  font-size: calc(10px + 0.6vmin);
-  margin-bottom: 10px;
-  display: flex;
+.table-head{
+  font-weight: bold;
+  background: #192330; 
+}
+
+.table-row {
+  display: table-row;
+  width: auto;
+  clear: both;
 }

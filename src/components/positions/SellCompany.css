@@ -1,3 +1,9 @@
-.sell-form{
-    padding-top: 8px;
+.sell-company {
+    background: #a02323;
+    cursor: pointer;
+}
+
+.sell-company:hover {
+    background: red;
+    font-weight: bold;
 }

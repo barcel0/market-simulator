@@ -84,30 +84,49 @@ class App extends Component {
   }
 
   sellCompany(id){
-    const closedPosition=this.state.positions.filter((position)=> position.positionId === id);
+    const closedPosition = this.state.positions.filter((position)=> position.positionId === id);
     const filteredPositions = this.state.positions.filter((position)=> position.positionId !== id);
     this.setState({positions: filteredPositions});
     
     //update cash
-    const newCash = this.state.cash + closedPosition[0].value
+    const newCash = +(this.state.cash + closedPosition[0].value).toFixed(2);
     this.setState({cash: newCash});
   }
 
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        <div className="header">
+          MARKETS
+        </div>
+        <div className="main">
+          <Companies 
+              companies = {this.state.companies}
+              buyCompany = {this.buyCompany}
+            />
           <Dashboard 
             cash={this.state.cash}
-          />
-          <Companies 
-            companies = {this.state.companies}
-            buyCompany = {this.buyCompany}
           />
           <Positions 
             positions = {this.state.positions}
             sellCompany = {this.sellCompany}
           />
+        </div>
+
+
+
+        <div className="App-header">
+          {/* <Dashboard 
+            cash={this.state.cash}
+          /> */}
+          {/* <Companies 
+            companies = {this.state.companies}
+            buyCompany = {this.buyCompany}
+          /> */}
+          {/* <Positions 
+            positions = {this.state.positions}
+            sellCompany = {this.sellCompany}
+          /> */}
         </div>
       </div>
     );

@@ -12,14 +12,13 @@ class PositionItem extends Component{
 
     render() {
         return (
-            <div className="PositionRow">
-                <div className="PositionData">{this.props.name}</div>
-                <div className="PositionData">{this.props.ticker}</div>
-                <div className="PositionData">{this.props.amount}</div>
-                <div className="PositionData">{this.props.price}</div>
-                <div className="PositionData">{this.props.cost}</div>
-                <div className="PositionData">{this.props.value}</div>
-                <div className="PositionData">{this.props.profit}</div>
+            <div className="table-row">
+                <div className="table-col company-data">{this.props.name}</div>
+                <div className="table-col company-data">{this.props.amount}</div>
+                <div className="table-col company-data">{this.props.price}</div>
+                <div className="table-col company-data">{this.props.cost}€</div>
+                <div className="table-col company-data">{this.props.value}€</div>
+                <div className="table-col company-data green">{this.props.profit}€</div>
                 <SellCompany 
                     sellCompany = {this.props.sellCompany}
                     positionId = {this.props.positionId}

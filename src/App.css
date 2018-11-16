@@ -11,6 +11,10 @@ h2{
   font-size: 1.2em;
   text-transform: uppercase;
 }
+.app{
+  margin: 0;
+  padding: 0;
+}
 
 .header{
   background: black;
@@ -20,4 +24,17 @@ h2{
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+}
+
+.panel{
+  background: #2f425a;
+  color: white;
+  width: 90%;
+  padding: 20px 40px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.green{
+  color:#50b948;
 }

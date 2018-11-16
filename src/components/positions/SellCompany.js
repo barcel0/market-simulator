@@ -16,9 +16,7 @@ class SellCompany extends Component {
     
     render(){
         return(
-            <div className="sell-form">
-                <button onClick={this.handleClick}>SELL</button>
-        </div>
+            <div className="table-col sell-company" onClick={this.handleClick}>SELL</div>                
         )
     }
 }
