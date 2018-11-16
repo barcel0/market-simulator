@@ -23,7 +23,6 @@ class App extends Component {
     this.positionUpdate = this.positionUpdate.bind(this);
     this.buyCompany = this.buyCompany.bind(this);
     this.sellCompany = this.sellCompany.bind(this);
-    
   }
   
   componentDidMount(){
