@@ -12,34 +12,10 @@ class App extends Component {
     this.state = {
       cash: 5000,    
       companies: [
-        {
-          name: 'Santander',
-          ticker: 'SAN',
-          id: 1,
-          rate: 4,
-          variation: 0,        
-        },
-        {
-          name: 'BBVA',
-          ticker: 'BBVA',
-          id: 2,
-          rate: 5,
-          variation: 0,
-        },
-        {
-          name: 'Viscofan',
-          ticker: 'VIS',
-          id: 3,
-          rate: 50,
-          variation: 0,
-        },
-        {
-          name: 'Mapfre',
-          ticker: 'MAP',
-          id: 4,
-          rate: 2.50,
-          variation: 0,
-        },
+        { name: 'Santander', ticker: 'SAN', id: 1, rate: 4, variation: 0},
+        { name: 'BBVA',ticker: 'BBVA',id: 2, rate: 5, variation: 0},
+        { name: 'Viscofan', ticker: 'VIS', id: 3, rate: 50, variation: 0},
+        { name: 'Mapfre', ticker: 'MAP', id: 4, rate: 2.50, variation: 0},
       ],
       positions: []
     };
