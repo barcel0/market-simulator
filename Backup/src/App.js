@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Companies from './components/companies/Companies';
-import Positions from './components/positions/Positions';
-import Dashboard from './components/dashboard/Dashboard'
+import CompanyItem from './components/CompanyItem';
+import BuyCompany from './components/BuyCompany';
+import PositionItem from './components/PositionItem';
+import SellCompany from './components/SellCompany';
+import Dashboard from './components/Dashboard'
 import './App.css';
 
 
@@ -134,6 +136,7 @@ class App extends Component {
 
   sellCompany(id){
     const closedPosition=this.state.positions.filter((position)=> position.positionId === id);
+    console.log(`closed position: ${closedPosition}`);
     const filteredPositions = this.state.positions.filter((position)=> position.positionId !== id);
     this.setState({positions: filteredPositions});
     
@@ -150,20 +153,61 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
+          <h2>Dashboard</h2>
           <Dashboard 
             cash={this.state.cash}
           />
-          <Companies 
-            companies = {this.state.companies}
-            buyCompany = {this.buyCompany}
-          />
-          <Positions 
-            positions = {this.state.positions}
-            sellCompany = {this.sellCompany}
-          />
+          <h2>Companies</h2>
+          {this.state.companies.map((company, i) =>
+          <div className="MainRow">
+            <CompanyItem
+              key={i}
+              name={company.name} 
+              ticker={company.ticker} 
+              rate={company.rate} 
+              variation={company.variation}
+              id={company.id}
+              buyCompany={this.buyCompany}
+            />
+            <BuyCompany 
+              id={company.id}
+              buyCompany={this.buyCompany}
+            />
+            </div>
+          )}
+          <h2>Positions</h2>
+          <div className="MainRow">
+                <div className="PositionData">Name</div>
+                <div className="PositionData">Ticker</div>
+                <div className="PositionData">Amount</div>
+                <div className="PositionData">Price</div>
+                <div className="PositionData">Cost</div>
+                <div className="PositionData">Value</div>
+                <div className="PositionData">Profit</div>
+                <div className="PositionData">Action</div>
+            </div>
+          {this.state.positions.map((position, i)=>
+            <div className="MainRow">
+              <PositionItem 
+                key={i}
+                name={position.name}
+                ticker={position.ticker}
+                amount={position.amount}
+                price={position.price}
+                cost={position.cost}
+                value={position.value}
+                profit={position.profit}
+              />
+              <SellCompany 
+                positionId={position.positionId}
+                sellCompany={this.sellCompany}
+              />
+            </div>
+            )}
         </div>
       </div>
     );
   }
 }
+
 export default App;

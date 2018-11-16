@@ -1,0 +1,14 @@
+.company-data{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 8px;
+    width: calc(100% / 4);
+    text-align: center;
+}
+
+.company-row {
+    width: calc(100% / 1.2);
+    font-size: calc(10px + 0.6vmin);
+    margin-bottom: 10px;
+    display: flex;
+  }
