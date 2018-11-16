@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NumericInput from 'react-numeric-input';
 import './BuyCompany.css';
-
+// test
 class BuyCompany extends Component {
     constructor(){
         super();
