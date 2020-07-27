@@ -2,7 +2,8 @@
   display: table;         
   width: 100%;         
   background-color: none;         
-  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+  border-spacing: 4px; /* cellspacing:poor IE support for  this */
+
 }
 
 .table-head{
@@ -14,4 +15,12 @@
   display: table-row;
   width: auto;
   clear: both;
+}
+
+.table-info {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 100%;    
+  line-height: 40px;
+  font-style: italic;
 }

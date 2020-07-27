@@ -2,10 +2,7 @@
     float: left; /* fix for  buggy browsers */
     display: table-column;         
     width: calc(100% / 7);    
-    line-height: 40px;     
-    vertical-align: center;
-    margin: 2px 0;
-
+    line-height: 40px;
   }
 
   .company-data{

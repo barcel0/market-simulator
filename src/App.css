@@ -6,6 +6,13 @@ body{
     background: #27282e;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0px;
+}
+
 h2{
   margin: 0 0 10px 0;
   font-size: 1.2em;
@@ -16,25 +23,21 @@ h2{
   padding: 0;
 }
 
-.header{
-  background: black;
-  height: 40px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
 .panel{
   background: #2f425a;
   color: white;
   width: 90%;
+  max-width: 1300px;
   padding: 20px 40px;
   margin: 10px 0;
   text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .green{
   color:#50b948;
+}
+
+.red{
+  color:red;
 }

@@ -1,0 +1,9 @@
+.dashboard-data{
+  display: inline;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.dashboard-data span{
+  font-weight: normal;
+}

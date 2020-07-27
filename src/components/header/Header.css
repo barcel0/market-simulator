@@ -1,0 +1,38 @@
+.header{
+  background: black;
+  height: 60px;
+  color: white;
+  margin: 0 auto;
+}
+
+.title {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 10px;
+}
+
+.reset-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 40px;
+  width: 100px;
+  line-height: 60px;
+  text-align: center;
+  background: #cd8e0e;
+  cursor: pointer;
+}
+
+.reset-button:hover{
+  background: orange;
+  font-weight: bold;
+}
+
+.reset-button img{
+  width:20px;
+  margin-right: 10px;
+}
+
+  
